@@ -1,0 +1,889 @@
+{
+  "__Type__": "Vo",
+  "__TypeCode__": "DataImport.CsvImportForm",
+  "Id": 9000000053,
+  "DesignIdentifier": "StateImport",
+  "Name": {"en": "State Import"},
+  "Promoted": false,
+  "Active": true,
+  "ShortName": "",
+  "CreateWebFormId": 0,
+  "EditWebFormId": 0,
+  "ValidationRuleList": {
+    "Id": 9000000054,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.ValidationRule"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "FormProcessingRule": {
+    "CalculatedFieldList": {
+      "Id": 9000000058,
+      "NamedObjectList": false,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.CalculatedField"
+      },
+      "ValueObjectList": [],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "Id": 9000000055,
+    "NamedObjectList": {
+      "Id": 9000000057,
+      "NamedObjectList": true,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.NamedObject"
+      },
+      "ValueObjectList": [
+        {
+          "ItemKey": "16000000349",
+          "ValueObject": {
+            "Id": 16000000349,
+            "Name": "State Import",
+            "ShortName": "State Import",
+            "StartingDesignObjectId": 9000000053,
+            "StartingTypeCode": "DataImport.ImportFormRecord",
+            "__TypeCode__": "Common.StartingNamedObject",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000368",
+          "ValueObject": {
+            "Id": 16000000368,
+            "Name": "State Import {State Id} --> Custom Shared Record(State Config)",
+            "RelationshipList": [{
+              "AttributeCode": "StateId",
+              "AttributeTypeCode": {
+                "DesignId": 5000000059,
+                "TypeCode": "CustomEntity.CustomSharedRecord"
+              },
+              "Id": 16000000351,
+              "StartingTypeCode": {
+                "DesignId": 9000000053,
+                "TypeCode": "DataImport.ImportFormRecord"
+              },
+              "__TypeCode__": "Common.AttributeRelationship",
+              "__Type__": "Vo"
+            }],
+            "ShortName": "{State Id} --> Custom Shared Record(State Config)",
+            "StartingDesignObjectId": 9000000053,
+            "StartingTypeCode": "DataImport.ImportFormRecord",
+            "__TypeCode__": "Common.RelationshipNamedObject",
+            "__Type__": "Vo"
+          }
+        }
+      ],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "NodeList": {
+      "Id": 9000000056,
+      "NamedObjectList": false,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.Node"
+      },
+      "ValueObjectList": [
+        {
+          "ItemKey": "16000000384",
+          "ValueObject": {
+            "Id": 16000000384,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000385,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000371",
+          "ValueObject": {
+            "CalculatedFieldAttributeCode": "",
+            "Id": 16000000371,
+            "IncludeUnlistedAttributes": false,
+            "Name": "Create State",
+            "NodeLinkList": {
+              "Id": 16000000372,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000379",
+                  "ValueObject": {
+                    "Description": "Action Completed",
+                    "Id": 16000000379,
+                    "LinkNodeId": 16000000403,
+                    "LinkValue": "Success",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000380",
+                  "ValueObject": {
+                    "Description": "Identifier Already Exists",
+                    "Id": 16000000380,
+                    "LinkNodeId": 16000000386,
+                    "LinkValue": "IdentifierAlreadyExists",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000383",
+                  "ValueObject": {
+                    "Description": "Create Information Not Found",
+                    "Id": 16000000383,
+                    "LinkNodeId": 16000000384,
+                    "LinkValue": "CreateInformationNotFound",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "RecordType": {
+              "DesignId": 5000000059,
+              "TypeCode": "CustomEntity.CustomSharedRecord"
+            },
+            "SetAttributeList": {
+              "Id": 16000000373,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.SetAttribute"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000375",
+                  "ValueObject": {
+                    "Id": 16000000375,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "RewardThreshold",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "RewardThreshold",
+                      "DataType": "Number",
+                      "Fixed": false,
+                      "Name": "Reward Threshold",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000376",
+                  "ValueObject": {
+                    "Id": 16000000376,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "NotificationEmails",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "NotificationEmails",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Notification Emails",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000377",
+                  "ValueObject": {
+                    "Id": 16000000377,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "RewardLimit",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "RewardLimit",
+                      "DataType": "Number",
+                      "Fixed": false,
+                      "Name": "Reward Limit",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000378",
+                  "ValueObject": {
+                    "Id": 16000000378,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "PrimaryIdentifier",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "StateId",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "State Id",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "35000000481",
+                  "ValueObject": {
+                    "Id": 35000000481,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "Name",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "Name",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Name",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "UpdateFromReference": {
+              "AllowsFixed": false,
+              "DataType": "ValueObject",
+              "Fixed": false,
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument",
+              "ValueObjectTypeCode": "Common.ValueObject"
+            },
+            "__TypeCode__": "Common.CreateRecordActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000395",
+          "ValueObject": {
+            "Id": 16000000395,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000396,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000398",
+          "ValueObject": {
+            "Id": 16000000398,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000399,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000401",
+          "ValueObject": {
+            "Id": 16000000401,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000402,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000386",
+          "ValueObject": {
+            "Id": 16000000386,
+            "IncludeUnlistedAttributes": false,
+            "Name": "Update State",
+            "NodeLinkList": {
+              "Id": 16000000387,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000393",
+                  "ValueObject": {
+                    "Description": "Action Completed",
+                    "Id": 16000000393,
+                    "LinkNodeId": 16000000403,
+                    "LinkValue": "Success",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000394",
+                  "ValueObject": {
+                    "Description": "Record Not Found",
+                    "Id": 16000000394,
+                    "LinkNodeId": 16000000395,
+                    "LinkValue": "RecordNotFound",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000397",
+                  "ValueObject": {
+                    "Description": "Identifier Already Exists",
+                    "Id": 16000000397,
+                    "LinkNodeId": 16000000398,
+                    "LinkValue": "IdentifierAlreadyExists",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000400",
+                  "ValueObject": {
+                    "Description": "Update Information Not Found",
+                    "Id": 16000000400,
+                    "LinkNodeId": 16000000401,
+                    "LinkValue": "UpdateInformationNotFound",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "RecordReference": {
+              "AllowsFixed": false,
+              "DataType": "ValueObject",
+              "Fixed": false,
+              "Name": "State Import {State Id} --> Custom Shared Record(State Config)",
+              "NamedObject": 16000000368,
+              "Type": "RuleArgument",
+              "ValueObjectTypeCode": "Common.Primary"
+            },
+            "SetAttributeList": {
+              "Id": 16000000388,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.SetAttribute"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000390",
+                  "ValueObject": {
+                    "Id": 16000000390,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "RewardThreshold",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "RewardThreshold",
+                      "DataType": "Number",
+                      "Fixed": false,
+                      "Name": "Reward Threshold",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000391",
+                  "ValueObject": {
+                    "Id": 16000000391,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "NotificationEmails",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "NotificationEmails",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Notification Emails",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000392",
+                  "ValueObject": {
+                    "Id": 16000000392,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "RewardLimit",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "RewardLimit",
+                      "DataType": "Number",
+                      "Fixed": false,
+                      "Name": "Reward Limit",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "35000000482",
+                  "ValueObject": {
+                    "Id": 35000000482,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "Name",
+                      "DataType": "null",
+                      "DesignId": 5000000059,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "CustomEntity.CustomSharedRecord"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "Name",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Name",
+                      "NamedObject": 16000000349,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "UpdateFromReference": {
+              "AllowsFixed": false,
+              "DataType": "ValueObject",
+              "Fixed": false,
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument",
+              "ValueObjectTypeCode": "Common.ValueObject"
+            },
+            "UpdateOnlyIfChanged": true,
+            "__TypeCode__": "Common.UpdateRecordActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000403",
+          "ValueObject": {
+            "Id": 16000000403,
+            "Name": "Termination Node",
+            "NodeLinkList": {
+              "Id": 16000000404,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ProcessOutcome": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "__TypeCode__": "Common.TerminationNode",
+            "__Type__": "Vo"
+          }
+        }
+      ],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "RootNodeLink": {
+      "Description": "",
+      "Id": 9000000059,
+      "LinkNodeId": 16000000371,
+      "LinkValue": "RootNode",
+      "__TypeCode__": "Common.NodeLink",
+      "__Type__": "Vo"
+    },
+    "__TypeCode__": "Common.FormProcessingRule",
+    "__Type__": "Vo"
+  },
+  "ImportFileNamePrefix": "",
+  "NumberOfThreads": 1,
+  "CharacterSet": "windows-1252",
+  "IncludeErrorInExceptionFile": false,
+  "HasHeader": true,
+  "ImportColumnList": {
+    "Id": 9000000060,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "DataImport.CsvImportColumn"
+    },
+    "ValueObjectList": [
+      {
+        "ItemKey": "9000000067",
+        "ValueObject": {
+          "Id": 9000000067,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsRecordNotFound": true,
+            "AttributeType": "UniqueIdentifier",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "Code": "StateId",
+            "Custom": true,
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IndexInDatabase": false,
+            "Name": {"en": "State Id"},
+            "RecordType": {
+              "DesignId": 5000000059,
+              "TypeCode": "CustomEntity.CustomSharedRecord"
+            },
+            "Required": true,
+            "ShowInList": true,
+            "Unique": false,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "35000000458",
+        "ValueObject": {
+          "Id": 35000000458,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsMultipleLines": false,
+            "AttributeType": "String",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "CharacterData": false,
+            "Code": "Name",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "MinimumWidth": 0,
+            "Name": {"en": "Name"},
+            "Required": true,
+            "ShowInList": true,
+            "TrimBlanks": true,
+            "Unique": false,
+            "Weight": 1,
+            "Width": 100
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "9000000069",
+        "ValueObject": {
+          "Id": 9000000069,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AttributeType": "Number",
+            "CalculatedFieldId": 0,
+            "Code": "RewardThreshold",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DecimalPlaces": 2,
+            "DefaultValue": 0,
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IntegerWidth": 9,
+            "MaximumValue": 0,
+            "MinimumValue": 0,
+            "Name": {"en": "Reward Threshold"},
+            "NegativeAllowed": true,
+            "Required": false,
+            "ShowInList": true,
+            "UseBounds": false,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "9000000071",
+        "ValueObject": {
+          "Id": 9000000071,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsMultipleLines": false,
+            "AttributeType": "String",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "CharacterData": false,
+            "Code": "NotificationEmails",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "MinimumWidth": 0,
+            "Name": {"en": "Notification Emails"},
+            "Required": false,
+            "ShowInList": true,
+            "TrimBlanks": true,
+            "Unique": false,
+            "Weight": 1,
+            "Width": 2000
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "9000000073",
+        "ValueObject": {
+          "Id": 9000000073,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AttributeType": "Number",
+            "CalculatedFieldId": 0,
+            "Code": "RewardLimit",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DecimalPlaces": 2,
+            "DefaultValue": 0,
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IntegerWidth": 9,
+            "MaximumValue": 0,
+            "MinimumValue": 0,
+            "Name": {"en": "Reward Limit"},
+            "NegativeAllowed": true,
+            "Required": false,
+            "ShowInList": true,
+            "UseBounds": false,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      }
+    ],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "Quoted": true,
+  "NamedObjectList": {
+    "Id": 9000000061,
+    "NamedObjectList": true,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.NamedObject"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "CalculatedFieldList": {
+    "Id": 9000000062,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.CalculatedField"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "DesignClientId": 9998,
+  "BuildId": 9994,
+  "ExtensibleAttributeList": [],
+  "ModifiedStandardAttributeList": []}

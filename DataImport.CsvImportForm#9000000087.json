@@ -1,0 +1,1559 @@
+{
+  "__Type__": "Vo",
+  "__TypeCode__": "DataImport.CsvImportForm",
+  "Id": 9000000087,
+  "DesignIdentifier": "MolinaProgramImport",
+  "Name": {"en": "Molina Program Import"},
+  "Promoted": false,
+  "Active": true,
+  "ShortName": "",
+  "CreateWebFormId": 0,
+  "EditWebFormId": 0,
+  "ValidationRuleList": {
+    "Id": 16000000405,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.ValidationRule"
+    },
+    "ValueObjectList": [{
+      "ItemKey": "35000000129",
+      "ValueObject": {
+        "CalculatedFieldList": {
+          "Id": 35000000132,
+          "NamedObjectList": false,
+          "TypeCode": {
+            "DesignId": 0,
+            "TypeCode": "Common.CalculatedField"
+          },
+          "ValueObjectList": [],
+          "__TypeCode__": "Common.ValueObjectList",
+          "__Type__": "Vo"
+        },
+        "Id": 35000000129,
+        "Name": {"en": "Check Required Fields if Generate Purl"},
+        "NamedObjectList": {
+          "Id": 35000000131,
+          "NamedObjectList": true,
+          "TypeCode": {
+            "DesignId": 0,
+            "TypeCode": "Common.NamedObject"
+          },
+          "ValueObjectList": [{
+            "ItemKey": "35000000134",
+            "ValueObject": {
+              "Id": 35000000134,
+              "Name": "Molina Program Import",
+              "ShortName": "Molina Program Import",
+              "StartingDesignObjectId": 9000000087,
+              "StartingTypeCode": "DataImport.ImportFormRecord",
+              "__TypeCode__": "Common.StartingNamedObject",
+              "__Type__": "Vo"
+            }
+          }],
+          "__TypeCode__": "Common.ValueObjectList",
+          "__Type__": "Vo"
+        },
+        "NodeList": {
+          "Id": 35000000130,
+          "NamedObjectList": false,
+          "TypeCode": {
+            "DesignId": 0,
+            "TypeCode": "Common.Node"
+          },
+          "ValueObjectList": [
+            {
+              "ItemKey": "35000000162",
+              "ValueObject": {
+                "Condition": {
+                  "ConditionLineList": {
+                    "Id": 35000000165,
+                    "NamedObjectList": false,
+                    "TypeCode": {
+                      "DesignId": 0,
+                      "TypeCode": "Common.ConditionLine"
+                    },
+                    "ValueObjectList": [{
+                      "ItemKey": "35000000166",
+                      "ValueObject": {
+                        "AndOr": "&",
+                        "ClosingBrackets": "",
+                        "Condition": "=",
+                        "ConditionString": "=",
+                        "FirstAttributeReference": {
+                          "AllowsFixed": false,
+                          "AttributeCode": "GeneratePurl",
+                          "DataType": "Boolean",
+                          "Fixed": false,
+                          "Name": "Generate Purl",
+                          "NamedObject": 35000000134,
+                          "Type": "RuleArgument"
+                        },
+                        "FirstAttributeString": "Generate Purl",
+                        "Id": 35000000166,
+                        "OpeningBrackets": "",
+                        "SecondAttributeReference": {
+                          "AllowsFixed": true,
+                          "AttributeCode": "null",
+                          "DataType": "Boolean",
+                          "Fixed": true,
+                          "FixedValue": true,
+                          "Name": "true",
+                          "NamedObject": 0,
+                          "Type": "RuleArgument"
+                        },
+                        "SecondAttributeString": "true",
+                        "__TypeCode__": "Common.BooleanConditionLine",
+                        "__Type__": "Vo"
+                      }
+                    }],
+                    "__TypeCode__": "Common.ValueObjectList",
+                    "__Type__": "Vo"
+                  },
+                  "Id": 35000000164,
+                  "__TypeCode__": "Common.Condition",
+                  "__Type__": "Vo"
+                },
+                "Id": 35000000162,
+                "Name": "Are we generating a PURL",
+                "NodeLinkList": {
+                  "Id": 35000000163,
+                  "NamedObjectList": false,
+                  "TypeCode": {
+                    "DesignId": 0,
+                    "TypeCode": "Common.NodeLink"
+                  },
+                  "ValueObjectList": [
+                    {
+                      "ItemKey": "35000000167",
+                      "ValueObject": {
+                        "Description": "True",
+                        "Id": 35000000167,
+                        "LinkNodeId": 35000000169,
+                        "LinkValue": "T",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    },
+                    {
+                      "ItemKey": "35000000168",
+                      "ValueObject": {
+                        "Description": "False",
+                        "Id": 35000000168,
+                        "LinkNodeId": 0,
+                        "LinkValue": "F",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    }
+                  ],
+                  "__TypeCode__": "Common.ValueObjectList",
+                  "__Type__": "Vo"
+                },
+                "__TypeCode__": "Common.DecisionNode",
+                "__Type__": "Vo"
+              }
+            },
+            {
+              "ItemKey": "35000000169",
+              "ValueObject": {
+                "Id": 35000000169,
+                "Name": "Fork Node",
+                "NodeLinkList": {
+                  "Id": 35000000170,
+                  "NamedObjectList": false,
+                  "TypeCode": {
+                    "DesignId": 0,
+                    "TypeCode": "Common.NodeLink"
+                  },
+                  "ValueObjectList": [
+                    {
+                      "ItemKey": "35000000171",
+                      "ValueObject": {
+                        "Description": "Step 1",
+                        "Id": 35000000171,
+                        "LinkNodeId": 35000000172,
+                        "LinkValue": "ForkNodeLinkCode",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    },
+                    {
+                      "ItemKey": "35000000181",
+                      "ValueObject": {
+                        "Description": "Step 2",
+                        "Id": 35000000181,
+                        "LinkNodeId": 35000000182,
+                        "LinkValue": "ForkNodeLinkCode",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    }
+                  ],
+                  "__TypeCode__": "Common.ValueObjectList",
+                  "__Type__": "Vo"
+                },
+                "__TypeCode__": "Common.ForkNode",
+                "__Type__": "Vo"
+              }
+            },
+            {
+              "ItemKey": "35000000172",
+              "ValueObject": {
+                "Condition": {
+                  "ConditionLineList": {
+                    "Id": 35000000175,
+                    "NamedObjectList": false,
+                    "TypeCode": {
+                      "DesignId": 0,
+                      "TypeCode": "Common.ConditionLine"
+                    },
+                    "ValueObjectList": [{
+                      "ItemKey": "35000000176",
+                      "ValueObject": {
+                        "AndOr": "&",
+                        "ClosingBrackets": "",
+                        "Condition": "=",
+                        "ConditionString": "=",
+                        "FirstAttributeReference": {
+                          "AllowsFixed": false,
+                          "AttributeCode": "StoreId",
+                          "DataType": "String",
+                          "Fixed": false,
+                          "Name": "Store Id",
+                          "NamedObject": 35000000134,
+                          "Type": "RuleArgument"
+                        },
+                        "FirstAttributeString": "Store Id",
+                        "Id": 35000000176,
+                        "OpeningBrackets": "",
+                        "SecondAttributeReference": {
+                          "AllowsFixed": true,
+                          "AttributeCode": "null",
+                          "DataType": "String",
+                          "Fixed": true,
+                          "FixedValue": "",
+                          "Name": "",
+                          "NamedObject": 0,
+                          "Type": "RuleArgument"
+                        },
+                        "SecondAttributeString": "",
+                        "__TypeCode__": "Common.StringConditionLine",
+                        "__Type__": "Vo"
+                      }
+                    }],
+                    "__TypeCode__": "Common.ValueObjectList",
+                    "__Type__": "Vo"
+                  },
+                  "Id": 35000000174,
+                  "__TypeCode__": "Common.Condition",
+                  "__Type__": "Vo"
+                },
+                "Id": 35000000172,
+                "Name": "Is Store Empty?",
+                "NodeLinkList": {
+                  "Id": 35000000173,
+                  "NamedObjectList": false,
+                  "TypeCode": {
+                    "DesignId": 0,
+                    "TypeCode": "Common.NodeLink"
+                  },
+                  "ValueObjectList": [
+                    {
+                      "ItemKey": "35000000177",
+                      "ValueObject": {
+                        "Description": "True",
+                        "Id": 35000000177,
+                        "LinkNodeId": 35000000179,
+                        "LinkValue": "T",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    },
+                    {
+                      "ItemKey": "35000000178",
+                      "ValueObject": {
+                        "Description": "False",
+                        "Id": 35000000178,
+                        "LinkNodeId": 0,
+                        "LinkValue": "F",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    }
+                  ],
+                  "__TypeCode__": "Common.ValueObjectList",
+                  "__Type__": "Vo"
+                },
+                "__TypeCode__": "Common.DecisionNode",
+                "__Type__": "Vo"
+              }
+            },
+            {
+              "ItemKey": "35000000179",
+              "ValueObject": {
+                "AttributeCode": {
+                  "AllowsFixed": false,
+                  "AttributeCode": "StoreId",
+                  "DataType": "null",
+                  "DesignId": 9000000087,
+                  "Fixed": false,
+                  "Type": "RuleArgument",
+                  "TypeCode": "DataImport.ImportFormRecord"
+                },
+                "Id": 35000000179,
+                "MessageKey": "error.validation.RequiredField",
+                "MessageMergeValueReference": {
+                  "AllowsFixed": true,
+                  "AttributeCode": "null",
+                  "DataType": "String",
+                  "Fixed": true,
+                  "FixedValue": "",
+                  "Name": "",
+                  "NamedObject": 0,
+                  "Type": "RuleArgument"
+                },
+                "Name": "Validation Exception",
+                "NodeLinkList": {
+                  "Id": 35000000180,
+                  "NamedObjectList": false,
+                  "TypeCode": {
+                    "DesignId": 0,
+                    "TypeCode": "Common.NodeLink"
+                  },
+                  "ValueObjectList": [],
+                  "__TypeCode__": "Common.ValueObjectList",
+                  "__Type__": "Vo"
+                },
+                "__TypeCode__": "Common.ValidationExceptionActionNode",
+                "__Type__": "Vo"
+              }
+            },
+            {
+              "ItemKey": "35000000182",
+              "ValueObject": {
+                "Condition": {
+                  "ConditionLineList": {
+                    "Id": 35000000175,
+                    "NamedObjectList": false,
+                    "TypeCode": {
+                      "DesignId": 0,
+                      "TypeCode": "Common.ConditionLine"
+                    },
+                    "ValueObjectList": [{
+                      "ItemKey": "35000000176",
+                      "ValueObject": {
+                        "AndOr": "&",
+                        "ClosingBrackets": "",
+                        "Condition": "=",
+                        "ConditionString": "=",
+                        "FirstAttributeReference": {
+                          "AllowsFixed": false,
+                          "AttributeCode": "ProgramUrl",
+                          "DataType": "String",
+                          "Fixed": false,
+                          "Name": "Program Url",
+                          "NamedObject": 35000000134,
+                          "Type": "RuleArgument"
+                        },
+                        "FirstAttributeString": "Program Url",
+                        "Id": 35000000176,
+                        "OpeningBrackets": "",
+                        "SecondAttributeReference": {
+                          "AllowsFixed": true,
+                          "AttributeCode": "null",
+                          "DataType": "String",
+                          "Fixed": true,
+                          "FixedValue": "",
+                          "Name": "",
+                          "NamedObject": 0,
+                          "Type": "RuleArgument"
+                        },
+                        "SecondAttributeString": "",
+                        "__TypeCode__": "Common.StringConditionLine",
+                        "__Type__": "Vo"
+                      }
+                    }],
+                    "__TypeCode__": "Common.ValueObjectList",
+                    "__Type__": "Vo"
+                  },
+                  "Id": 35000000174,
+                  "__TypeCode__": "Common.Condition",
+                  "__Type__": "Vo"
+                },
+                "Id": 35000000182,
+                "Name": "Is Program Url Empty?",
+                "NodeLinkList": {
+                  "Id": 35000000173,
+                  "NamedObjectList": false,
+                  "TypeCode": {
+                    "DesignId": 0,
+                    "TypeCode": "Common.NodeLink"
+                  },
+                  "ValueObjectList": [
+                    {
+                      "ItemKey": "35000000177",
+                      "ValueObject": {
+                        "Description": "True",
+                        "Id": 35000000177,
+                        "LinkNodeId": 35000000183,
+                        "LinkValue": "T",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    },
+                    {
+                      "ItemKey": "35000000178",
+                      "ValueObject": {
+                        "Description": "False",
+                        "Id": 35000000178,
+                        "LinkNodeId": 0,
+                        "LinkValue": "F",
+                        "__TypeCode__": "Common.NodeLink",
+                        "__Type__": "Vo"
+                      }
+                    }
+                  ],
+                  "__TypeCode__": "Common.ValueObjectList",
+                  "__Type__": "Vo"
+                },
+                "__TypeCode__": "Common.DecisionNode",
+                "__Type__": "Vo"
+              }
+            },
+            {
+              "ItemKey": "35000000183",
+              "ValueObject": {
+                "AttributeCode": {
+                  "AllowsFixed": false,
+                  "AttributeCode": "ProgramUrl",
+                  "DataType": "null",
+                  "DesignId": 9000000087,
+                  "Fixed": false,
+                  "Type": "RuleArgument",
+                  "TypeCode": "DataImport.ImportFormRecord"
+                },
+                "Id": 35000000183,
+                "MessageKey": "error.validation.RequiredField",
+                "MessageMergeValueReference": {
+                  "AllowsFixed": true,
+                  "AttributeCode": "null",
+                  "DataType": "String",
+                  "Fixed": true,
+                  "FixedValue": "",
+                  "Name": "",
+                  "NamedObject": 0,
+                  "Type": "RuleArgument"
+                },
+                "Name": "Validation Exception",
+                "NodeLinkList": {
+                  "Id": 35000000180,
+                  "NamedObjectList": false,
+                  "TypeCode": {
+                    "DesignId": 0,
+                    "TypeCode": "Common.NodeLink"
+                  },
+                  "ValueObjectList": [],
+                  "__TypeCode__": "Common.ValueObjectList",
+                  "__Type__": "Vo"
+                },
+                "__TypeCode__": "Common.ValidationExceptionActionNode",
+                "__Type__": "Vo"
+              }
+            }
+          ],
+          "__TypeCode__": "Common.ValueObjectList",
+          "__Type__": "Vo"
+        },
+        "RootNodeLink": {
+          "Description": "",
+          "Id": 35000000133,
+          "LinkNodeId": 35000000162,
+          "LinkValue": "RootNode",
+          "__TypeCode__": "Common.NodeLink",
+          "__Type__": "Vo"
+        },
+        "__TypeCode__": "Common.ValidationRule",
+        "__Type__": "Vo"
+      }
+    }],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "FormProcessingRule": {
+    "CalculatedFieldList": {
+      "Id": 16000000409,
+      "NamedObjectList": false,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.CalculatedField"
+      },
+      "ValueObjectList": [],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "Id": 16000000406,
+    "NamedObjectList": {
+      "Id": 16000000408,
+      "NamedObjectList": true,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.NamedObject"
+      },
+      "ValueObjectList": [
+        {
+          "ItemKey": "16000000441",
+          "ValueObject": {
+            "Id": 16000000441,
+            "Name": "Molina Program Import",
+            "ShortName": "Molina Program Import",
+            "StartingDesignObjectId": 9000000087,
+            "StartingTypeCode": "DataImport.ImportFormRecord",
+            "__TypeCode__": "Common.StartingNamedObject",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000463",
+          "ValueObject": {
+            "Id": 16000000463,
+            "Name": "{State Id} --> Custom Shared Record(State Config)",
+            "RelationshipList": [{
+              "AttributeCode": "StateId",
+              "AttributeTypeCode": {
+                "DesignId": 5000000059,
+                "TypeCode": "CustomEntity.CustomSharedRecord"
+              },
+              "Id": 16000000444,
+              "StartingTypeCode": {
+                "DesignId": 9000000087,
+                "TypeCode": "DataImport.ImportFormRecord"
+              },
+              "__TypeCode__": "Common.AttributeRelationship",
+              "__Type__": "Vo"
+            }],
+            "ShortName": "{State Id} --> Custom Shared Record(State Config)",
+            "StartingDesignObjectId": 9000000087,
+            "StartingTypeCode": "DataImport.ImportFormRecord",
+            "__TypeCode__": "Common.RelationshipNamedObject",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000464",
+          "ValueObject": {
+            "Id": 16000000464,
+            "Name": "{Store Id} --> Any Catalog Goods Category",
+            "RelationshipList": [{
+              "AttributeCode": "StoreId",
+              "AttributeTypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.AbstractCatalogCategory"
+              },
+              "Id": 16000000445,
+              "StartingTypeCode": {
+                "DesignId": 9000000087,
+                "TypeCode": "DataImport.ImportFormRecord"
+              },
+              "__TypeCode__": "Common.AttributeRelationship",
+              "__Type__": "Vo"
+            }],
+            "ShortName": "{Store Id} --> Any Catalog Goods Category",
+            "StartingDesignObjectId": 9000000087,
+            "StartingTypeCode": "DataImport.ImportFormRecord",
+            "__TypeCode__": "Common.RelationshipNamedObject",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000462",
+          "ValueObject": {
+            "Id": 16000000462,
+            "Name": "{Program Id} --> Program(Molina Programs)",
+            "RelationshipList": [{
+              "AttributeCode": "ProgramId",
+              "AttributeTypeCode": {
+                "DesignId": 5000000049,
+                "TypeCode": "Common.CatalogProgram"
+              },
+              "Id": 16000000443,
+              "StartingTypeCode": {
+                "DesignId": 9000000087,
+                "TypeCode": "DataImport.ImportFormRecord"
+              },
+              "__TypeCode__": "Common.AttributeRelationship",
+              "__Type__": "Vo"
+            }],
+            "ShortName": "{Program Id} --> Program(Molina Programs)",
+            "StartingDesignObjectId": 9000000087,
+            "StartingTypeCode": "DataImport.ImportFormRecord",
+            "__TypeCode__": "Common.RelationshipNamedObject",
+            "__Type__": "Vo"
+          }
+        }
+      ],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "NodeList": {
+      "Id": 16000000407,
+      "NamedObjectList": false,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.Node"
+      },
+      "ValueObjectList": [
+        {
+          "ItemKey": "16000000492",
+          "ValueObject": {
+            "Id": 16000000492,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000493,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000476",
+          "ValueObject": {
+            "CalculatedFieldAttributeCode": "",
+            "Id": 16000000476,
+            "IncludeUnlistedAttributes": false,
+            "Name": "Create Molina Program",
+            "NodeLinkList": {
+              "Id": 16000000477,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000487",
+                  "ValueObject": {
+                    "Description": "Action Completed",
+                    "Id": 16000000487,
+                    "LinkNodeId": 16000000514,
+                    "LinkValue": "Success",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000488",
+                  "ValueObject": {
+                    "Description": "Identifier Already Exists",
+                    "Id": 16000000488,
+                    "LinkNodeId": 16000000494,
+                    "LinkValue": "IdentifierAlreadyExists",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000491",
+                  "ValueObject": {
+                    "Description": "Create Information Not Found",
+                    "Id": 16000000491,
+                    "LinkNodeId": 16000000492,
+                    "LinkValue": "CreateInformationNotFound",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "RecordType": {
+              "DesignId": 5000000049,
+              "TypeCode": "Common.CatalogProgram"
+            },
+            "SetAttributeList": {
+              "Id": 16000000478,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.SetAttribute"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000480",
+                  "ValueObject": {
+                    "Id": 16000000480,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "ProgramName",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ProgramName",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Program Name",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000481",
+                  "ValueObject": {
+                    "Id": 16000000481,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "StateId",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "Id",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Id",
+                      "NamedObject": 16000000463,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000482",
+                  "ValueObject": {
+                    "Id": 16000000482,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "GeneratePurl",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "GeneratePurl",
+                      "DataType": "Boolean",
+                      "Fixed": false,
+                      "Name": "Generate Purl",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000483",
+                  "ValueObject": {
+                    "Id": 16000000483,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "ShowAllCatalogItems",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ShowAllCatalogItems",
+                      "DataType": "Boolean",
+                      "Fixed": false,
+                      "Name": "Show All Catalog Items",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000484",
+                  "ValueObject": {
+                    "Id": 16000000484,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "PrimaryIdentifier",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ProgramId",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Program Id",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000485",
+                  "ValueObject": {
+                    "Id": 16000000485,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "RedemptionStoreId",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "Id",
+                      "DataType": "Long",
+                      "Fixed": false,
+                      "Name": "Id",
+                      "NamedObject": 16000000464,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000486",
+                  "ValueObject": {
+                    "Id": 16000000486,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "URL",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ProgramUrl",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Program Url",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "UpdateFromReference": {
+              "AllowsFixed": false,
+              "DataType": "ValueObject",
+              "Fixed": false,
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument",
+              "ValueObjectTypeCode": "Common.ValueObject"
+            },
+            "__TypeCode__": "Common.CreateRecordActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000506",
+          "ValueObject": {
+            "Id": 16000000506,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000507,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000509",
+          "ValueObject": {
+            "Id": 16000000509,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000510,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000512",
+          "ValueObject": {
+            "Id": 16000000512,
+            "MessageKey": "",
+            "MessageMergeValueReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "Name": "Processing Exception",
+            "NodeLinkList": {
+              "Id": 16000000513,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ReturnsCustomMessageKey": false,
+            "__TypeCode__": "Common.ProcessingExceptionActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000494",
+          "ValueObject": {
+            "Id": 16000000494,
+            "IncludeUnlistedAttributes": false,
+            "Name": "Update Molina Program",
+            "NodeLinkList": {
+              "Id": 16000000495,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000504",
+                  "ValueObject": {
+                    "Description": "Action Completed",
+                    "Id": 16000000504,
+                    "LinkNodeId": 16000000514,
+                    "LinkValue": "Success",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000505",
+                  "ValueObject": {
+                    "Description": "Record Not Found",
+                    "Id": 16000000505,
+                    "LinkNodeId": 16000000506,
+                    "LinkValue": "RecordNotFound",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000508",
+                  "ValueObject": {
+                    "Description": "Identifier Already Exists",
+                    "Id": 16000000508,
+                    "LinkNodeId": 16000000509,
+                    "LinkValue": "IdentifierAlreadyExists",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000511",
+                  "ValueObject": {
+                    "Description": "Update Information Not Found",
+                    "Id": 16000000511,
+                    "LinkNodeId": 16000000512,
+                    "LinkValue": "UpdateInformationNotFound",
+                    "__TypeCode__": "Common.NodeLink",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "RecordReference": {
+              "AllowsFixed": false,
+              "DataType": "ValueObject",
+              "Fixed": false,
+              "Name": "{Program Id} --> Program(Molina Programs)",
+              "NamedObject": 16000000462,
+              "Type": "RuleArgument",
+              "ValueObjectTypeCode": "Common.Primary"
+            },
+            "SetAttributeList": {
+              "Id": 16000000496,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.SetAttribute"
+              },
+              "ValueObjectList": [
+                {
+                  "ItemKey": "16000000498",
+                  "ValueObject": {
+                    "Id": 16000000498,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "ProgramName",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ProgramName",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Program Name",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000499",
+                  "ValueObject": {
+                    "Id": 16000000499,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "StateId",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "Id",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Id",
+                      "NamedObject": 16000000463,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000500",
+                  "ValueObject": {
+                    "Id": 16000000500,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "GeneratePurl",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "GeneratePurl",
+                      "DataType": "Boolean",
+                      "Fixed": false,
+                      "Name": "Generate Purl",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000501",
+                  "ValueObject": {
+                    "Id": 16000000501,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "ShowAllCatalogItems",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ShowAllCatalogItems",
+                      "DataType": "Boolean",
+                      "Fixed": false,
+                      "Name": "Show All Catalog Items",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000502",
+                  "ValueObject": {
+                    "Id": 16000000502,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "RedemptionStoreId",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "Id",
+                      "DataType": "Long",
+                      "Fixed": false,
+                      "Name": "Id",
+                      "NamedObject": 16000000464,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                },
+                {
+                  "ItemKey": "16000000503",
+                  "ValueObject": {
+                    "Id": 16000000503,
+                    "ToLanguageCode": "",
+                    "UpdateAttributeReference": {
+                      "AllowsFixed": false,
+                      "AttributeCode": "URL",
+                      "DataType": "null",
+                      "DesignId": 5000000049,
+                      "Fixed": false,
+                      "Type": "RuleArgument",
+                      "TypeCode": "Common.CatalogProgram"
+                    },
+                    "UpdateFromReference": {
+                      "AllowsFixed": true,
+                      "AttributeCode": "ProgramUrl",
+                      "DataType": "String",
+                      "Fixed": false,
+                      "Name": "Program Url",
+                      "NamedObject": 16000000441,
+                      "Type": "RuleArgument"
+                    },
+                    "__TypeCode__": "Common.SetAttribute",
+                    "__Type__": "Vo"
+                  }
+                }
+              ],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "UpdateFromReference": {
+              "AllowsFixed": false,
+              "DataType": "ValueObject",
+              "Fixed": false,
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument",
+              "ValueObjectTypeCode": "Common.ValueObject"
+            },
+            "UpdateOnlyIfChanged": true,
+            "__TypeCode__": "Common.UpdateRecordActionNode",
+            "__Type__": "Vo"
+          }
+        },
+        {
+          "ItemKey": "16000000514",
+          "ValueObject": {
+            "Id": 16000000514,
+            "Name": "Termination Node",
+            "NodeLinkList": {
+              "Id": 16000000515,
+              "NamedObjectList": false,
+              "TypeCode": {
+                "DesignId": 0,
+                "TypeCode": "Common.NodeLink"
+              },
+              "ValueObjectList": [],
+              "__TypeCode__": "Common.ValueObjectList",
+              "__Type__": "Vo"
+            },
+            "ProcessOutcome": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "String",
+              "Fixed": true,
+              "FixedValue": "",
+              "Name": "",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "__TypeCode__": "Common.TerminationNode",
+            "__Type__": "Vo"
+          }
+        }
+      ],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "RootNodeLink": {
+      "Description": "",
+      "Id": 16000000410,
+      "LinkNodeId": 16000000476,
+      "LinkValue": "RootNode",
+      "__TypeCode__": "Common.NodeLink",
+      "__Type__": "Vo"
+    },
+    "__TypeCode__": "Common.FormProcessingRule",
+    "__Type__": "Vo"
+  },
+  "ImportFileNamePrefix": "",
+  "NumberOfThreads": 1,
+  "CharacterSet": "windows-1252",
+  "IncludeErrorInExceptionFile": false,
+  "HasHeader": true,
+  "ImportColumnList": {
+    "Id": 16000000411,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "DataImport.CsvImportColumn"
+    },
+    "ValueObjectList": [
+      {
+        "ItemKey": "16000000434",
+        "ValueObject": {
+          "Id": 16000000434,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsRecordNotFound": true,
+            "AttributeType": "UniqueIdentifier",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "Code": "ProgramId",
+            "Custom": true,
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IndexInDatabase": false,
+            "Name": {"en": "Program Id"},
+            "RecordType": {
+              "DesignId": 5000000049,
+              "TypeCode": "Common.CatalogProgram"
+            },
+            "Required": true,
+            "ShowInList": true,
+            "Unique": false,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "16000000435",
+        "ValueObject": {
+          "Id": 16000000435,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsMultipleLines": false,
+            "AttributeType": "String",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "CharacterData": false,
+            "Code": "ProgramName",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "MinimumWidth": 0,
+            "Name": {"en": "Program Name"},
+            "Required": true,
+            "ShowInList": true,
+            "TrimBlanks": true,
+            "Unique": false,
+            "Weight": 1,
+            "Width": 200
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "16000000436",
+        "ValueObject": {
+          "Id": 16000000436,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsRecordNotFound": false,
+            "AttributeType": "UniqueIdentifier",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "Code": "StateId",
+            "Custom": true,
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IndexInDatabase": false,
+            "Name": {"en": "State Id"},
+            "RecordType": {
+              "DesignId": 5000000059,
+              "TypeCode": "CustomEntity.CustomSharedRecord"
+            },
+            "Required": true,
+            "ShowInList": true,
+            "Unique": false,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "16000000437",
+        "ValueObject": {
+          "Id": 16000000437,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsRecordNotFound": false,
+            "AttributeType": "UniqueIdentifier",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "Code": "StoreId",
+            "Custom": true,
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IndexInDatabase": false,
+            "Name": {"en": "Store Id"},
+            "RecordType": {
+              "DesignId": 0,
+              "TypeCode": "Common.AbstractCatalogCategory"
+            },
+            "Required": false,
+            "ShowInList": true,
+            "Unique": false,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "16000000438",
+        "ValueObject": {
+          "Id": 16000000438,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AttributeType": "Boolean",
+            "CalculatedFieldId": 0,
+            "Code": "GeneratePurl",
+            "Custom": true,
+            "DataFormatCode": "dataformat.boolean.yes.no",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "Name": {"en": "Generate Purl"},
+            "Required": false,
+            "ShowInList": true,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "16000000439",
+        "ValueObject": {
+          "Id": 16000000439,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AllowsMultipleLines": false,
+            "AttributeType": "String",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "CharacterData": false,
+            "Code": "ProgramUrl",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "MinimumWidth": 0,
+            "Name": {"en": "Program Url"},
+            "Required": false,
+            "ShowInList": true,
+            "TrimBlanks": true,
+            "Unique": false,
+            "Weight": 1,
+            "Width": 200
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "16000000440",
+        "ValueObject": {
+          "Id": 16000000440,
+          "ImportColumnAttribute": {
+            "Active": true,
+            "AttributeType": "Boolean",
+            "CalculatedFieldId": 0,
+            "Code": "ShowAllCatalogItems",
+            "Custom": true,
+            "DataFormatCode": "dataformat.boolean.yes.no",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "Name": {"en": "Show All Catalog Items"},
+            "Required": false,
+            "ShowInList": true,
+            "Weight": 1
+          },
+          "__TypeCode__": "DataImport.CsvImportColumn",
+          "__Type__": "Vo"
+        }
+      }
+    ],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "Quoted": true,
+  "NamedObjectList": {
+    "Id": 16000000412,
+    "NamedObjectList": true,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.NamedObject"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "CalculatedFieldList": {
+    "Id": 16000000413,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.CalculatedField"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "DesignClientId": 9998,
+  "BuildId": 9994,
+  "ExtensibleAttributeList": [],
+  "ModifiedStandardAttributeList": []}

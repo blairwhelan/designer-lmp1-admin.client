@@ -1,0 +1,63 @@
+{
+  "__Type__": "Vo",
+  "__TypeCode__": "Web.WebSiteInterface",
+  "Id": 29000000173,
+  "DesignIdentifier": "loginSite1",
+  "Name": {"en": "Login Site 1"},
+  "Promoted": false,
+  "Active": true,
+  "ShortName": "",
+  "UserInterfaceFeatureList": {
+    "Id": 29000000174,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.UserInterfaceFeature"
+    },
+    "ValueObjectList": [{
+      "ItemKey": "164000000156",
+      "ValueObject": {
+        "Id": 164000000156,
+        "Name": {"en": "Test Feature"},
+        "__TypeCode__": "Common.UserInterfaceFeature",
+        "__Type__": "Vo"
+      }
+    }],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "LiveSiteUrl": "",
+  "SitePrefix": "",
+  "DefaultSite": true,
+  "SiteLanguageCode": "",
+  "UnderMaintenance": false,
+  "ContentRepository": "null",
+  "ClientContentRepository": "null",
+  "ContentSettingsList": {
+    "Id": 1000000005,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Web.WebSiteContentSettings"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "WebSiteEnvironmentSettingsList": {
+    "Id": 532000000024,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Web.WebSiteEnvironmentSettings"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "SupportsMemberEmulation": false,
+  "MemberEmulationPage": "",
+  "DesignClientId": 9998,
+  "BuildId": 9994,
+  "ExtensibleAttributeList": [],
+  "ModifiedStandardAttributeList": []}

@@ -1,0 +1,314 @@
+{
+  "__Type__": "Vo",
+  "__TypeCode__": "DataExport.CsvDataRecordExportProcess",
+  "Id": 129000000033,
+  "DesignIdentifier": "StateExport",
+  "Name": {"en": "State Export"},
+  "Promoted": false,
+  "Active": true,
+  "ShortName": "",
+  "NodeList": {
+    "Id": 200000000038,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.Node"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "RecordDelimiter": "\\r\\n",
+  "CharacterSet": "windows-1252",
+  "ExportRecordTypeCode": {
+    "DesignId": 5000000059,
+    "TypeCode": "CustomEntity.CustomSharedRecord"
+  },
+  "DataQuery": {
+    "Condition": {
+      "ConditionLineList": {
+        "Id": 200000000042,
+        "NamedObjectList": false,
+        "TypeCode": {
+          "DesignId": 0,
+          "TypeCode": "Common.ConditionLine"
+        },
+        "ValueObjectList": [{
+          "ItemKey": "200000000056",
+          "ValueObject": {
+            "AndOr": "&",
+            "ClosingBrackets": "",
+            "Condition": ">=",
+            "ConditionString": ">=",
+            "FirstAttributeReference": {
+              "AllowsFixed": false,
+              "AttributeCode": "RewardLimit",
+              "DataType": "Number",
+              "Fixed": false,
+              "Name": "Reward Limit",
+              "NamedObject": 200000000047,
+              "Type": "RuleArgument"
+            },
+            "FirstAttributeString": "Reward Limit",
+            "Id": 200000000056,
+            "OpeningBrackets": "",
+            "SecondAttributeReference": {
+              "AllowsFixed": true,
+              "AttributeCode": "null",
+              "DataType": "Number",
+              "Fixed": true,
+              "FixedValue": 0,
+              "Name": "0",
+              "NamedObject": 0,
+              "Type": "RuleArgument"
+            },
+            "SecondAttributeString": "0",
+            "__TypeCode__": "Common.NumberConditionLine",
+            "__Type__": "Vo"
+          }
+        }],
+        "__TypeCode__": "Common.ValueObjectList",
+        "__Type__": "Vo"
+      },
+      "Id": 200000000041,
+      "__TypeCode__": "Common.Condition",
+      "__Type__": "Vo"
+    },
+    "Id": 200000000039,
+    "SortLevelList": {
+      "Id": 200000000040,
+      "NamedObjectList": false,
+      "TypeCode": {
+        "DesignId": 0,
+        "TypeCode": "Common.DataQuerySortLevel"
+      },
+      "ValueObjectList": [],
+      "__TypeCode__": "Common.ValueObjectList",
+      "__Type__": "Vo"
+    },
+    "__TypeCode__": "Common.RecordDataQuery",
+    "__Type__": "Vo"
+  },
+  "ExportColumnList": {
+    "Id": 200000000043,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "DataExport.CsvExportColumn"
+    },
+    "ValueObjectList": [
+      {
+        "ItemKey": "200000000052",
+        "ValueObject": {
+          "ExportColumnAttribute": {
+            "Active": true,
+            "AllowsMultipleLines": false,
+            "AttributeType": "String",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "CharacterData": false,
+            "Code": "200000000052",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "MinimumWidth": 0,
+            "Name": {"en": "State Id"},
+            "Required": false,
+            "ShowInList": true,
+            "TrimBlanks": true,
+            "Unique": false,
+            "Weight": 1,
+            "Width": 20
+          },
+          "ExportColumnFieldReference": {
+            "AllowsFixed": true,
+            "AttributeCode": "PrimaryIdentifier",
+            "DataType": "String",
+            "Fixed": false,
+            "Name": "State Id",
+            "NamedObject": 200000000047,
+            "Type": "RuleArgument"
+          },
+          "Id": 200000000052,
+          "__TypeCode__": "DataExport.CsvExportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "200000000053",
+        "ValueObject": {
+          "ExportColumnAttribute": {
+            "Active": true,
+            "AllowsMultipleLines": false,
+            "AttributeType": "String",
+            "CalculatedFieldId": 0,
+            "CaseSetting": "",
+            "CharacterData": false,
+            "Code": "200000000053",
+            "Custom": true,
+            "DataFormatCode": "",
+            "DefaultValue": "",
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "MinimumWidth": 0,
+            "Name": {"en": "Name"},
+            "Required": false,
+            "ShowInList": true,
+            "TrimBlanks": true,
+            "Unique": false,
+            "Weight": 1,
+            "Width": 20
+          },
+          "ExportColumnFieldReference": {
+            "AllowsFixed": true,
+            "AttributeCode": "Name",
+            "DataType": "String",
+            "Fixed": false,
+            "Name": "Name",
+            "NamedObject": 200000000047,
+            "Type": "RuleArgument"
+          },
+          "Id": 200000000053,
+          "__TypeCode__": "DataExport.CsvExportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "200000000055",
+        "ValueObject": {
+          "ExportColumnAttribute": {
+            "Active": true,
+            "AttributeType": "Number",
+            "CalculatedFieldId": 0,
+            "Code": "200000000055",
+            "Custom": true,
+            "DataFormatCode": "dataformat.standard.number",
+            "DecimalPlaces": 0,
+            "DefaultValue": 0,
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IntegerWidth": 15,
+            "MaximumValue": 0,
+            "MinimumValue": 0,
+            "Name": {"en": "Threshold"},
+            "NegativeAllowed": true,
+            "Required": false,
+            "ShowInList": true,
+            "UseBounds": false,
+            "Weight": 1
+          },
+          "ExportColumnFieldReference": {
+            "AllowsFixed": true,
+            "AttributeCode": "RewardThreshold",
+            "DataType": "Number",
+            "Fixed": false,
+            "Name": "Reward Threshold",
+            "NamedObject": 200000000047,
+            "Type": "RuleArgument"
+          },
+          "Id": 200000000055,
+          "__TypeCode__": "DataExport.CsvExportColumn",
+          "__Type__": "Vo"
+        }
+      },
+      {
+        "ItemKey": "200000000054",
+        "ValueObject": {
+          "ExportColumnAttribute": {
+            "Active": true,
+            "AttributeType": "Number",
+            "CalculatedFieldId": 0,
+            "Code": "200000000054",
+            "Custom": true,
+            "DataFormatCode": "dataformat.standard.number",
+            "DecimalPlaces": 0,
+            "DefaultValue": 0,
+            "Deprecated": false,
+            "EditOnAdd": true,
+            "EditOnUpdate": true,
+            "Hidden": false,
+            "IntegerWidth": 15,
+            "MaximumValue": 0,
+            "MinimumValue": 0,
+            "Name": {"en": "Reward Limit"},
+            "NegativeAllowed": true,
+            "Required": false,
+            "ShowInList": true,
+            "UseBounds": false,
+            "Weight": 1
+          },
+          "ExportColumnFieldReference": {
+            "AllowsFixed": true,
+            "AttributeCode": "RewardLimit",
+            "DataType": "Number",
+            "Fixed": false,
+            "Name": "Reward Limit",
+            "NamedObject": 200000000047,
+            "Type": "RuleArgument"
+          },
+          "Id": 200000000054,
+          "__TypeCode__": "DataExport.CsvExportColumn",
+          "__Type__": "Vo"
+        }
+      }
+    ],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "SuppressFileIfEmpty": false,
+  "IncludeColumnHeadings": true,
+  "UseNameForColumnHeadings": true,
+  "Quoted": false,
+  "NamedObjectList": {
+    "Id": 200000000044,
+    "NamedObjectList": true,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.NamedObject"
+    },
+    "ValueObjectList": [{
+      "ItemKey": "200000000047",
+      "ValueObject": {
+        "Id": 200000000047,
+        "Name": "State Config",
+        "ShortName": "State Config",
+        "StartingDesignObjectId": 5000000059,
+        "StartingTypeCode": "CustomEntity.CustomSharedRecord",
+        "__TypeCode__": "Common.StartingNamedObject",
+        "__Type__": "Vo"
+      }
+    }],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "CalculatedFieldList": {
+    "Id": 200000000045,
+    "NamedObjectList": false,
+    "TypeCode": {
+      "DesignId": 0,
+      "TypeCode": "Common.CalculatedField"
+    },
+    "ValueObjectList": [],
+    "__TypeCode__": "Common.ValueObjectList",
+    "__Type__": "Vo"
+  },
+  "RootNodeLink": {
+    "Description": "",
+    "Id": 200000000046,
+    "LinkNodeId": 0,
+    "LinkValue": "RootNode",
+    "__TypeCode__": "Common.NodeLink",
+    "__Type__": "Vo"
+  },
+  "DesignClientId": 9998,
+  "BuildId": 9994,
+  "ExtensibleAttributeList": [],
+  "ModifiedStandardAttributeList": []}
