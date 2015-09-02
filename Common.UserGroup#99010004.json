@@ -6,7 +6,7 @@
   "Name": {"en": "Corporate Administrator User Group"},
   "Promoted": false,
   "Active": true,
-  "ShortName": "",
+  "ShortName": "corpoarteAdmin",
   "CreateWebFormId": 0,
   "EditWebFormId": 0,
   "ValidationRuleList": {
@@ -20,7 +20,7 @@
     "__TypeCode__": "Common.ValueObjectList",
     "__Type__": "Vo"
   },
-  "Description": {},
+  "Description": {"en": ""},
   "UserGroupClassTypeCode": "Common.Person",
   "Numbering": "null",
   "SystemRoleId": 99030006,
@@ -53,6 +53,6 @@
     "__Type__": "Vo"
   },
   "DesignClientId": 9998,
-  "BuildId": 9994,
+  "BuildId": 0,
   "ExtensibleAttributeList": [],
   "ModifiedStandardAttributeList": []}
